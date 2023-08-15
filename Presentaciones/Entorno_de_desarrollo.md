@@ -55,11 +55,15 @@ android: pkg (termux).
 ---
 
 # . compiladores 
-g++
-    MIngw64
-    WSL
-clang
-MSVC C++: es el compilador propietario de microsof echo especificamente para Windows y su IDE Vstudio.
+g++: es el compilador de c++ del proyecto GNU, este es de codigo abierto y es portable, por lo que es el que usaremos en el curso.
+para windows hay dos opciones recomendadas usar MIngw64 o usar g++ bajo linux con WSL.
+
+Clang/llvm:
+
+MSVC C++: es el compilador propietario de Microsoft echo especificamente para su IDE Vstudio, la desventaja de este esque ocupas una licencia para usarlo y esta directamente enfoqcado para Windows.
+
+oneAPI DPC++/C++:
+
 
 comparacion de velocidades:
 
@@ -75,14 +79,14 @@ Integrated development environment o en español Entorno de desarrollo integrado
 
 Es un IDE extendible desarrollado por Microsoft bajo la licencia MIT con Electron, el cual es un framework para desarrollar aplicaciones de escritorio con HTML, CSS y JavaScript por esta misma este hay una version en linea https://vscode.dev/
 
-extensiones:
-
+extensiones: C/C++, error lens, prettier, glasslt-VSC, vim.
+temas:nord, catputchin
 # vscodium
 
 VSCodium es una distribución binaria hecha por la comunidad y licenciada de manera libre del editor VS Code, este surge ya que vscode aunque tenga un codigo fuente publico, los binarios que distribuyen tienen telemetria activada por defecto.
-la diferencia principal con vscode es la tienda y la remote window. 
+la diferencia principal con vscode es la tienda [open-vsx](https://open-vsx.org/) en lugar de la de [microsoft](https://marketplace.visualstudio.com/VSCode)  y la remote window. 
 
-extensiones: 
+extensiones: las mismas que vscode exceptuando el compilador aqui recomiendo codeLLDB yclangd.
 
 ---
 
@@ -95,7 +99,7 @@ ssh
 # busquedas en internet
 
 paginas de documentacion de c++
-libretranslate
+[libretranslate](https://libretranslate.com/?)
 
 ---
 

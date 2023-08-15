@@ -6,7 +6,7 @@ paginate: true
 ---
 <style scoped>h1, h2, h3 {color: #3b4252;}</style>
 
-![bg opacity:.3](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Foriginal%2F001%2F900%2F244%2Ffb7.jpg&sp=1692108595T2c91c932bf6bdba225d563f4bf4e293cbbc2c441ddc30c74a246d10c2908d53d)
+![bg opacity:.3](https://i.kym-cdn.com/photos/images/original/001/900/244/fb7.jpg)
 
 # <!--fit--> Entorno de desarrollo en c++
 ## Por Ariel Parra.
@@ -24,7 +24,7 @@ img[alt~="center"] {display: block;margin: 0 auto;}
 mark {background-color: rgb(129 161 193 / 0.6)};
 </style>
 
-![bg opacity:.7](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FUYjwETVkdpPbh4ZrdPjJoE.jpg&sp=1692107720T2cdeaef6e4396a7bb750ba080d3b517cc4a68537862dbdfb8ed73c6ad13dfafc)
+![bg opacity:.7](https://cdn.mos.cms.futurecdn.net/UYjwETVkdpPbh4ZrdPjJoE.jpg)
 # <mark> 1. terminales</mark>
 
 ---
@@ -119,7 +119,7 @@ extensiones: las mismas que vscode exceptuando el compilador aqui recomiendo cod
 ---
 
 # <mark>5. git y Github</mark>
-![bg opacity:.4](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--oVyFGbtN--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_900%2Cq_auto%2Cw_1600%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7ce4oq75sia6ni6q46s3.png&sp=1692111750Tacb6b94695b22f81974087893397afc48e0557682adf00ea42060ede929c274b)
+![bg opacity:.4](https://res.cloudinary.com/practicaldev/image/fetch/s--oVyFGbtN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7ce4oq75sia6ni6q46s3.png)
 
 ---
 

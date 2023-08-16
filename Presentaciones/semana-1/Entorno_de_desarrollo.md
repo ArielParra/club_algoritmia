@@ -31,6 +31,8 @@ mark {background-color: rgb(129 161 193 / 0.6)};
 Un emulador de terminal permite al usuario acceder todas las  aplicaciones del sistema operativo con interfaces de text, en ingles command-line interfaces (CLI) o text user interface (TUI) applications.
 En nuestro caso es donde correremos el compilador y ejecutaremos nuestros algortimos.
 
+---
+
 <mark>CMD/PowerShell:</mark> son las terminales ya incluidas con Windows.
 <mark>PowerShell v7:</mark> es la nueva version opensource de powershell. 
 <mark>git bash:</mark> es una capa de compatibilidad de la terminal de linux en Windows.
@@ -50,6 +52,8 @@ En nuestro caso es donde correremos el compilador y ejecutaremos nuestros algort
 
 Un gestor de paquetes es una colección de herramientas de software que automatizan el proceso de instalación, actualización, configuración y eliminación de programas en una computadora. En nuestro caso nos puede ayudar a instalar el IDE y el compilador.
 
+---
+
 <mark>Windows:</mark> [*scoop](https://scoop.sh/), [winget](https://winget.run/), [MSYS2](https://packages.msys2.org/queue).
 <mark>MacOSX:</mark> [homebrew](https://brew.sh/).
 <mark>Linux:</mark> apt, pacman, etc.
@@ -67,6 +71,8 @@ Un gestor de paquetes es una colección de herramientas de software que automati
 Para windows hay dos opciones principales, MIngw64 o g++ bajo linux con WSL (gcc/build-base/build-essential).
 
 <mark>Clang/LLVM:</mark> es un compilador de codigo abierto, altamente optimizado, dice ser compatible con MSV y gcc aunque este tiene toda una infraestructura distinta.
+
+---
 
 <mark>MSVC C++:</mark> es el compilador propietario de Microsoft, por lo que ocupas una licencia para usarlo, esta echo especificamente para su IDE Vstudio y enfocado solamente para Windows.
 
@@ -103,6 +109,8 @@ Es un IDE de codigo abierto, extendible e integrado con git y una terminal, es d
 extensiones: C/C++, error lens, prettier, glasslt-VSC, vim.
 temas: nord, Catppuccin, GruvBox, Monokai, etc.
 
+---
+
 <mark>Instalar el compilador en vscode:</mark>
 - Primero instalamos la extension de C/C++
 - Despues descargamos el compilador desde algun package manager o desde la pagina de [sourceforge mingw-w64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download)
@@ -118,12 +126,14 @@ extensiones: las mismas que vscode exceptuando el compilador aqui recomiendo cod
 
 ---
 
-# <mark>5. git y Github</mark>
+# <mark>5. Git y Github</mark>
 ![bg opacity:.4](https://res.cloudinary.com/practicaldev/image/fetch/s--oVyFGbtN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7ce4oq75sia6ni6q46s3.png)
 
 ---
 
 Git es una herramienta de codigo abierto sobre el control de version distribuido mientras que GitHub es una plataforma y servicio basado en la nube de Microsoft para el desarrollo de software y el control de versiones utilizando Git, basicamente un servidor donde almacenas tu codigo y lo controlas con Git. 
+
+---
 
 <mark>Para conectar git con github:</mark>
 
@@ -147,6 +157,9 @@ ssh-keygen -t ed25519 -C "al-ID-@edu.uaa.mx"
 ```
 
 - Copiamos los datos del archivo generado (C:\Users\"Usuario"/.ssh/id_ed25519.pub ó /home/"usuario"/.ssh/id_ed25519.pub) y lo conectamos con nuestra cuenta de github en: https://github.com/settings/ssh/new
+
+---
+
 - Y por ultimo descargamos nuestro repositorio:
 ```
 git clone git@github.com:"Usuario de GitHub"/"Proyecto".git
@@ -168,9 +181,9 @@ git pull
 ---
 
 <mark>Paginas de documentacion de c++:</mark> [microsoft](https://learn.microsoft.com/es-es/cpp/cpp/cpp-language-reference?view=msvc-170), [cplusplus](https://cplusplus.com/reference/), [w3school](https://www.w3schools.com/cpp/default.asp) ,[geeksforgeeks](https://www.geeksforgeeks.org/c-plus-plus/), [cpprefernece](https://en.cppreference.com/w/), [tabla ascii](https://theasciicode.com.ar/).
-<mark>Traductores de ingles:</mark> [libretranslate](https://libretranslate.com/?)
-<mark>Operadores de busqueda:</mark>  [Joshua Hardwick](https://ahrefs.com/blog/google-advanced-search-operators/), [fireship](https://yewtu.be/watch?v=cEBkvm0-rg0)
-<mark>Multiples buscadores:</mark> [searxng](https://searx.space/), [Ariel Parra searxng](https://searx.arielparra.tech)
+<mark>Traductores de ingles:</mark> [libretranslate](https://libretranslate.com/?).
+<mark>Operadores de busqueda:</mark>  [Joshua Hardwick](https://ahrefs.com/blog/google-advanced-search-operators/), [fireship](https://yewtu.be/watch?v=cEBkvm0-rg0).
+<mark>Multiples buscadores:</mark> [searxng](https://searx.space/), [Ariel Parra searxng](https://searx.arielparra.tech).
 
 ---
 <style scoped>{font-size: 27px;}</style>
@@ -188,6 +201,7 @@ archivo1.cpp archivo2.cpp 677A.cpp
 4 5 14
 4[usuario@computadora "Ubicacion"]$ rm a.out
 ```
+---
 
 <mark>Compilar y ejecutrar en una terminal de Windows:</mark>
 

@@ -54,7 +54,7 @@ Un gestor de paquetes es una colección de herramientas de software que automati
 
 ---
 
-<mark>Windows:</mark> [*scoop](https://scoop.sh/), [winget](https://winget.run/), [MSYS2](https://packages.msys2.org/queue).
+<mark>Windows:</mark> [*scoop](https://scoop.sh/), [winget](https://winget.run/), [MSYS2 (pacman)](https://packages.msys2.org/queue).
 <mark>MacOSX:</mark> [homebrew](https://brew.sh/).
 <mark>Linux:</mark> apt, pacman, etc.
 <mark>iOS:</mark> apk (ish).
@@ -68,7 +68,7 @@ Un gestor de paquetes es una colección de herramientas de software que automati
 ---
 
 <mark>g++:</mark> es el compilador de c++ del proyecto GNU, este es de codigo abierto y es portable, por lo que es el que usaremos en el curso.
-Para windows hay dos opciones principales, MIngw64 o g++ bajo linux con WSL (gcc/build-base/build-essential).
+Para windows hay dos opciones principales, MIngw64 o g++ bajo linux con WSL, los nombres que puede tener en linux son: gcc/build-base/build-essential.
 
 <mark>Clang/LLVM:</mark> es un compilador de codigo abierto, altamente optimizado, dice ser compatible con MSV y gcc aunque este tiene toda una infraestructura distinta.
 
@@ -98,22 +98,31 @@ Es un IDE de codigo abierto, con extensibilidad de plugins, la ventaja de este e
 - Navegador de clase
 - Indentado automatico
 - Intercambio rapido entre archivos .h y .c/.cpp
-- Gestión de listas con diferentes usuarios
+- Debuger integrado
 
 ---
 
 # <mark>VSCode</mark>       ![w:70](vscode.png)
 
-Es un IDE de codigo abierto, extendible e integrado con git y una terminal, es desarrollado por Microsoft bajo la licencia MIT con Electron, el cual es un framework para desarrollar aplicaciones de escritorio con HTML, CSS y JavaScript por esto mismo, hay una version en linea https://vscode.dev/
+Es un IDE de codigo abierto, extendible e integrado con git y una terminal, es desarrollado por Microsoft bajo la licencia MIT con Electron, el cual es un framework para desarrollar aplicaciones de escritorio con HTML, CSS y JavaScript por esto mismo, hay una version en linea https://vscode.dev/. la mayor desventaja es que puede haber muchos problemas en la instalacion del compilador y debuger en Windows.
 
 extensiones: C/C++, error lens, prettier, glasslt-VSC, vim.
 temas: nord, Catppuccin, GruvBox, Monokai, etc.
 
 ---
 
-<mark>Instalar el compilador en vscode:</mark>
-- Primero instalamos la extension de C/C++
-- Despues descargamos el compilador desde algun package manager o desde la pagina de [sourceforge mingw-w64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download)
+<mark>Instalar el compilador en VScode de Windows:</mark>
+Seguiremos esta [guia oficial de VScode](https://code.visualstudio.com/docs/cpp/config-mingw).
+- Primero descargamos MSYS2
+- Ya descargado, abrimos la terminalo de MSYS y pegamos este comando para descargar las herramientas necesarias y le damos Enter a cualquier mensaje.
+
+```
+pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+```
+- Despues buscamos variables del sistema en el busc
+C:\msys64\mingw64\bin"
+
+- Luego instalamos la extension de C/C++
 - Al final solamente añadimos la dirección del programa del compilador a las opciones de la extension del compilador
 ---
 
@@ -140,7 +149,7 @@ Git es una herramienta de codigo abierto sobre el control de version distribuido
 - Primero crearemos una cuenta de github https://github.com/signup
 - Despues creamos un repositorio (proyecto) en  https://github.com/new
 - Luego descargamos git con algun pacakge manager o desde la pagina oficial https://git-scm.com/
-- También descargamos [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) en Windows si no esta instalado por defecto.
+- También comprobamos que esta instalado el clinte de [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) en Windows.
 - En una terminal creamos nuestro usuario local de git:
 
 ```
@@ -156,23 +165,21 @@ git config --global user.email correo@ejemplo.com
 ssh-keygen -t ed25519 -C "al-ID-@edu.uaa.mx"
 ```
 
-- Copiamos los datos del archivo generado (C:\Users\"Usuario"/.ssh/id_ed25519.pub ó /home/"usuario"/.ssh/id_ed25519.pub) y lo conectamos con nuestra cuenta de github en: https://github.com/settings/ssh/new
+- Copiamos los datos del archivo generado en C:\Users\\"Usuario"\\.ssh\id_ed25519.pub ó /home/"usuario"/.ssh/id_ed25519.pub (puedes abrirlo con bloc de notas ) y lo conectamos con nuestra cuenta de github atravez de https://github.com/settings/ssh/new, poniendole un nombre y pegando la los datos copiados (llave).
 
 ---
 
-- Y por ultimo descargamos nuestro repositorio:
+- Y por ultimo descargamos nuestro repositorio, en una terminal navega hacia tu carpeta de de destino, yo recomiendo la carpeta de Documentos (ojo en Windows la carpeta suele estar bajo C:\\Users\\"Usuario"\\One Drive\\Documentos)
+
 ```
 git clone git@github.com:"Usuario de GitHub"/"Proyecto".git
 ```
 
-Una vez ya tengamos conectado nuestra cuenta y proyecto, los 3 comandos principales de git que usaremos son:
+Una vez ya tengamos conectado nuestra cuenta y proyecto, los tres comandos principales de git que usaremos (ya estan integrados en VScode) son:
 
-```
-git add .
-git commit -m "mensaje del commit"
-git push
-git pull
-```
+- git commit -m "mensaje del commit" // este  es un comentario de los cambios locales a publicar (pushear)
+- git push //pusheas los cambios junto con el commit
+- git pull //descargas los cambios actuales
 
 ---
 
@@ -184,6 +191,9 @@ git pull
 <mark>Traductores de ingles:</mark> [libretranslate](https://libretranslate.com/?).
 <mark>Operadores de busqueda:</mark>  [Joshua Hardwick](https://ahrefs.com/blog/google-advanced-search-operators/), [fireship](https://yewtu.be/watch?v=cEBkvm0-rg0).
 <mark>Multiples buscadores:</mark> [searxng](https://searx.space/), [Ariel Parra searxng](https://searx.arielparra.tech).
+<mark>Teclear velozmente:</mark> [monkey type](https://monkeytype.com/), [typeclub](https://www.typingclub.com/), [TypeRacer](https://play.typeracer.com/), [vim-adventure](https://vim-adventures.com/).
+
+\*Para programar más rápido recomiendo usar una distribucion de teclado americano*
 
 ---
 <style scoped>{font-size: 27px;}</style>

@@ -92,7 +92,7 @@ Integrated development environment o en español Entorno de desarrollo integrado
 
 # <mark>Code::Blocks</mark> ![w:70](codeblocks.png)
 
-Es un IDE de codigo abierto, con extensibilidad de plugins, la ventaja de este es que ya esta preconfigurado y tiene funciones integradas como:
+Es un IDE de codigo abierto, con extensibilidad de plugins, la ventaja de este es que ya tiene funciones tales como:
 - Destacado sintaxis
 - Finalización de Código
 - Navegador de clase
@@ -119,14 +119,11 @@ Seguiremos esta [guia oficial de VScode](https://code.visualstudio.com/docs/cpp/
 ```
 pacman -S --needed base-devel mingw-w64-x86_64-toolchain
 ```
+- Despues buscamos variables del sistema en el busc
+C:\msys64\mingw64\bin"
 
----
-
-- Despues abrimos el buscador del sistema y buscamos "variables", el primer resultado tiene que ser un icono de una computadora con una palomita azul, esto nos abrira el cuadro de dialogo de "propiedades del sistema", alli damos click al boton que esta abajo a la derecha y que dice variables, en el nuevo cuadro de dialogo damos click en la linea que dice "Path" para seleccionarlo y le damos click en editar, alli agregas la dirección: "C:\msys64\mingw64\bin"
-
-- Luego instalamos la extension de C/C++ 
-- Al final abrimos la configuracion de de la extension de C/C++, alli buscamos donde diga "compiler path", dandole click nos abre un json, alli pegamos dentro de las comillas la dirección: "C:\\\msys64\\\mingw64\\\bin\\\g++.exe"
-
+- Luego instalamos la extension de C/C++
+- Al final solamente añadimos la dirección del programa del compilador a las opciones de la extension del compilador
 ---
 
 # <mark>*VScodium</mark> ![w:75](vscodium.png)
@@ -172,7 +169,7 @@ ssh-keygen -t ed25519 -C "al-ID-@edu.uaa.mx"
 
 ---
 
-- Y por ultimo descargamos nuestro repositorio, en una terminal navega hacia tu carpeta de de destino, yo recomiendo la carpeta de Documentos (en Windows este suele estar bajo C:\\Users\\"Usuario"\\One Drive\\Documentos)
+- Y por ultimo descargamos nuestro repositorio, en una terminal navega hacia tu carpeta de de destino, yo recomiendo la carpeta de Documentos (ojo en Windows la carpeta suele estar bajo C:\\Users\\"Usuario"\\One Drive\\Documentos)
 
 ```
 git clone git@github.com:"Usuario de GitHub"/"Proyecto".git
@@ -194,7 +191,7 @@ Una vez ya tengamos conectado nuestra cuenta y proyecto, los tres comandos princ
 <mark>Traductores de ingles:</mark> [libretranslate](https://libretranslate.com/?).
 <mark>Operadores de busqueda:</mark>  [Joshua Hardwick](https://ahrefs.com/blog/google-advanced-search-operators/), [fireship](https://yewtu.be/watch?v=cEBkvm0-rg0).
 <mark>Multiples buscadores:</mark> [searxng](https://searx.space/), [Ariel Parra searxng](https://searx.arielparra.tech).
-<mark>Teclear velozmente:</mark> [monkey type](https://monkeytype.com/), [typeclub](https://www.typingclub.com/), [TypeRacer](https://play.typeracer.com/), [vim-adventure](https://vim-adventures.com/).
+<mark>Teclear velozmente:</mark> [monkey type](https://monkeytype.com/), [typeclub](https://www.typingclub.com/), [TypeRacer](https://play.typeracer.com/), [openvim](https://www.openvim.com/), [vim-hero](https://www.vim-hero.com/lessons/intro-to-modes).
 
 \*Para programar más rápido recomiendo usar una distribucion de teclado americano*
 

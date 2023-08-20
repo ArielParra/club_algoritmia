@@ -67,8 +67,10 @@ Un gestor de paquetes es una colección de herramientas de software que automati
 
 ---
 
+un compilador es un programa que traduce código de un lenguaje de programación (C++) a lenguaje de bajo nivel (código máquina) para poder ejecutarse.
+
 <mark>g++:</mark> es el compilador de c++ del proyecto GNU, este es de codigo abierto y es portable, por lo que es el que usaremos en el curso.
-Para windows hay dos opciones principales, MIngw64 o g++ bajo linux con WSL, los nombres que puede tener en linux son: gcc/build-base/build-essential.
+Para windows hay dos opciones principales, MIngw64 (con MSYS2,scoop,etc.) o g++ bajo linux con WSL, los nombres que suele tener son: gcc, build-base ó build-essential.
 
 <mark>Clang/LLVM:</mark> es un compilador de codigo abierto, altamente optimizado, dice ser compatible con MSV y gcc aunque este tiene toda una infraestructura distinta.
 
@@ -113,17 +115,35 @@ temas: nord, Catppuccin, GruvBox, Monokai, etc.
 
 <mark>Instalar el compilador en VScode de Windows:</mark>
 Seguiremos esta [guia oficial de VScode](https://code.visualstudio.com/docs/cpp/config-mingw).
-- Primero descargamos MSYS2
-- Ya descargado, abrimos la terminalo de MSYS y pegamos este comando para descargar las herramientas necesarias y le damos Enter a cualquier mensaje.
+- Primero descargamos MSYS2 e instalamos dando varios Enters.
+- Ya instalado, abrimos la terminalo de MSYS y pegamos este comando para descargar las herramientas necesarias y le damos Enter a cualquier mensaje.
 
 ```
 pacman -S --needed base-devel mingw-w64-x86_64-toolchain
 ```
-- Despues buscamos variables del sistema en el busc
-C:\msys64\mingw64\bin"
+- Despues buscamos alguna de estas palabras clave: "variables, path, variables del sistema" en el buscador, abres la aplicacion con icono de una computadora con una palomita, alli abriremos las variables y editaremos el path agregando la direccion: "C:\msys64\mingw64\bin".
 
-- Luego instalamos la extension de C/C++
-- Al final solamente añadimos la dirección del programa del compilador a las opciones de la extension del compilador
+---
+
+ ![](path.png)
+
+---
+
+- Luego instalamos la extension del compilador: C/C++ en vscode 
+- Al final damos click a la configuración de la extensión y alli buscamos la opción que diga "compiler path", ahi nos manda a settings.json, el cual editamos de la siguiente manera: 
+
+```
+{
+    "C_Cpp.default.compilerPath": "C:/msys64/mingw64/bin/",
+    "C_Cpp.clang_format_path": "C:/msys64/mingw64/bin/",
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -g && $dir$fileNameWithoutExt"
+    }
+}
+```
+- Con esto ya podremos compilar y ejecutar el codigo dentro de VScode dandole click al simbolo de repdroducir en la parte superior derecha del editor.
+
+
 ---
 
 # <mark>*VScodium</mark> ![w:75](vscodium.png)
@@ -165,7 +185,7 @@ git config --global user.email correo@ejemplo.com
 ssh-keygen -t ed25519 -C "al-ID-@edu.uaa.mx"
 ```
 
-- Copiamos los datos del archivo generado en C:\Users\\"Usuario"\\.ssh\id_ed25519.pub ó /home/"usuario"/.ssh/id_ed25519.pub (puedes abrirlo con bloc de notas ) y lo conectamos con nuestra cuenta de github atravez de https://github.com/settings/ssh/new, poniendole un nombre y pegando la los datos copiados (llave).
+- Copiamos los datos del archivo generado en C:\Users\\"Usuario"\\.ssh\id_ed25519.pub ó /home/"usuario"/.ssh/id_ed25519.pub (puedes abrirlo con bloc de notas ) y lo conectamos con nuestra cuenta de github atravez de https://github.com/settings/ssh/new, dandole un nombre (el de tu computadora) y pegando la los datos copiados (llave).
 
 ---
 
@@ -191,9 +211,9 @@ Una vez ya tengamos conectado nuestra cuenta y proyecto, los tres comandos princ
 <mark>Traductores de ingles:</mark> [libretranslate](https://libretranslate.com/?).
 <mark>Operadores de busqueda:</mark>  [Joshua Hardwick](https://ahrefs.com/blog/google-advanced-search-operators/), [fireship](https://yewtu.be/watch?v=cEBkvm0-rg0).
 <mark>Multiples buscadores:</mark> [searxng](https://searx.space/), [Ariel Parra searxng](https://searx.arielparra.tech).
-<mark>Teclear velozmente:</mark> [monkey type](https://monkeytype.com/), [typeclub](https://www.typingclub.com/), [TypeRacer](https://play.typeracer.com/), [openvim]()
+<mark>Teclear velozmente:</mark> [monkey type](https://monkeytype.com/), [typeclub](https://www.typingclub.com/), [TypeRacer](https://play.typeracer.com/), [openvim](https://www.openvim.com/), [vimhero](https://www.vim-hero.com/).
 
-\*Para programar más rápido recomiendo usar una distribucion de teclado americano*
+\*Para programar más rápido recomiendo usar una distribución de teclado americano (US), o el US-International para seguir usando acentos y caracteres especiales*
 
 ---
 <style scoped>{font-size: 27px;}</style>

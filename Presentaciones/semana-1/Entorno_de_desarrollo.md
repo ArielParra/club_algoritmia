@@ -191,7 +191,7 @@ Una vez ya tengamos conectado nuestra cuenta y proyecto, los tres comandos princ
 <mark>Traductores de ingles:</mark> [libretranslate](https://libretranslate.com/?).
 <mark>Operadores de busqueda:</mark>  [Joshua Hardwick](https://ahrefs.com/blog/google-advanced-search-operators/), [fireship](https://yewtu.be/watch?v=cEBkvm0-rg0).
 <mark>Multiples buscadores:</mark> [searxng](https://searx.space/), [Ariel Parra searxng](https://searx.arielparra.tech).
-<mark>Teclear velozmente:</mark> [monkey type](https://monkeytype.com/), [typeclub](https://www.typingclub.com/), [TypeRacer](https://play.typeracer.com/), [openvim](https://www.openvim.com/), [vim-hero](https://www.vim-hero.com/lessons/intro-to-modes).
+<mark>Teclear velozmente:</mark> [monkey type](https://monkeytype.com/), [typeclub](https://www.typingclub.com/), [TypeRacer](https://play.typeracer.com/), [openvim]()
 
 \*Para programar más rápido recomiendo usar una distribucion de teclado americano*
 

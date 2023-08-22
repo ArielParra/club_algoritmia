@@ -15,7 +15,7 @@ using namespace std;
 /*prototipos*/
 int* RuletaRusa(int n);
 int* Baraja(int n);
-int* interseccion(int* vec1, int tam1, int*vec2,int tam2);
+int* interseccion(int* vec1, int tam1, int*vec2,int tam2, int &tam3);
 
 int main(){
 RAND;
@@ -23,7 +23,7 @@ cout<<endl<<"Ariel Emilio Parra Martinez ID:280862 ISC 3A"<<endl;
     int n=0;
 
     /*1*/
-    cout<<"Dame el tamaño de n:";
+    cout<<"Dame el tamano de n:";
     cin>>n;
     int *vec = RuletaRusa(n);
     cout<<"Vector de ruleta:";
@@ -34,7 +34,7 @@ cout<<endl<<"Ariel Emilio Parra Martinez ID:280862 ISC 3A"<<endl;
 
     /*2*/
     n=0;
-    cout<<endl<<"Dame el nuevo tamaño de n:";
+    cout<<endl<<"Dame el nuevo tamano de n:";
     cin>>n;
     int *vec0 = Baraja(n);
     cout<<"Baraja barajeada con numeros de 1 a "<<n<<":";
@@ -45,10 +45,23 @@ cout<<endl<<"Ariel Emilio Parra Martinez ID:280862 ISC 3A"<<endl;
 
     /*3*/
     const int tam1=8,tam2=8;
+    int tam3=0;
     int vec1[tam1]={2,4,12,9,2,15,4,2};
     int vec2[tam2]={1,3,9,12,9,4,2,1};
-    int* vec3=interseccion(vec1,tam1,vec2,tam2);
-    
+    int* vec3=interseccion(vec1,tam1,vec2,tam2,tam3);
+    cout<<endl<<"Vector 1:";
+    for (int i=0;i<tam1;++i) {
+        cout<<" "<<vec1[i];
+    }
+    cout<<endl<<"Vector 2:";
+    for (int i=0;i<tam2;++i) {
+        cout<<" "<<vec2[i];
+    }
+    cout<<endl<<"interseccion de ambos:";
+    for (int i=0;i<tam3;++i) {
+        cout<<" "<<vec3[i];
+    }
+    delete[] vec3;
 
 return 0;
 }
@@ -106,8 +119,8 @@ parámetro por referencia a un entero, la función retorna un vector dinámico c
 ambos vectores y sin números repetidos, el tamaño del nuevo vector se almacena en el parámetro
 enviado por referencia.*/
 
-int* interseccion(int* vec1, int tam1, int*vec2,int tam2){
-    int tamMax=0,tam=0;
+int* interseccion(int* vec1, int tam1, int*vec2,int tam2, int &tam3){
+    int tamMax=0;
     bool existe=false;
     if(tam1<=tam2){
         tamMax=tam1;
@@ -117,15 +130,15 @@ int* interseccion(int* vec1, int tam1, int*vec2,int tam2){
         for(int j=0;j<tam2;j++){
             if(vec1[i]==vec2[j]){
                 existe=false;
-                for(int k=0;k<tam;k++){
+                for(int k=0;k<tam3;k++){
                     if(vec1[i]==inter[k]){
                         existe=true;
                         break;
                     }
                 } 
                 if(!existe){
-                    inter[tam]=vec1[i];
-                    tam++;
+                    inter[tam3]=vec1[i];
+                    tam3++;
                 }
                 break;
             }

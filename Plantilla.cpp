@@ -1,5 +1,5 @@
-//Ariel Emilio Parra Martinez ID:280862 ISC 2A
-//link y/o nombre del programa
+//Ariel Emilio Parra Martinez
+//
 
 #include<bits/stdc++.h>
 using namespace std;

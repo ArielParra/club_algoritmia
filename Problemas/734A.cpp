@@ -8,10 +8,9 @@ using namespace std;
 int main(){
 SPEED;
     int num=0;
-    long long int a=0,d=0;
-    string win;
+    int a=0,d=0;
+    char win[100001];
     cin>>num;
-    win=new char [num];
     cin>>win;
     for(int i=0;i<num;i++){
         switch(win[i]){

@@ -1,6 +1,6 @@
 ---
 marp: true
-title: Entorno de desarrollo en C++
+title: Caracteres
 theme: default
 paginate: true
 ---

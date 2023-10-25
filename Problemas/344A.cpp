@@ -24,14 +24,3 @@ SPEED;
     cout<<cont;
 return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
